@@ -1,11 +1,11 @@
-package web.controller;
+package com.spring.spring_boot.controller;
 
+import com.spring.spring_boot.model.User;
+import com.spring.spring_boot.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
-import web.model.User;
-import web.service.UserService;
 
 import java.util.List;
 
@@ -28,11 +28,6 @@ public class UserController {
         return "new";
     }
 
-    @GetMapping(value = "/show")
-    public String getById(Model model, @RequestParam("id") int id) {
-        model.addAttribute("user", userService.getById(id));
-        return "show";
-    }
 
     @PostMapping()
     public String addUser(@ModelAttribute("user") User user) {

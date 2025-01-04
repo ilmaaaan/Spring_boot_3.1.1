@@ -1,6 +1,9 @@
-package web.model;
+package com.spring.spring_boot.model;
 
-import javax.persistence.*;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.*;
+
 import java.util.Objects;
 
 @Entity
@@ -10,7 +13,7 @@ public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
-    private int id;
+    private Integer id;
 
     @Column(name = "name")
     private String name;
@@ -19,7 +22,7 @@ public class User {
     private String lastName;
 
     @Column(name = "salary")
-    private int salary;
+    private Integer salary;
 
     public User() {
     }
@@ -30,7 +33,7 @@ public class User {
         this.salary = salary;
     }
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
@@ -54,7 +57,7 @@ public class User {
         this.lastName = lastName;
     }
 
-    public int getSalary() {
+    public Integer getSalary() {
         return salary;
     }
 

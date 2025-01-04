@@ -1,7 +1,9 @@
-package web.service;
+package com.spring.spring_boot.service;
 
 
-import web.model.User;
+
+
+import com.spring.spring_boot.model.User;
 
 import java.util.List;
 
